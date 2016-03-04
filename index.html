@@ -14,7 +14,7 @@
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
           <a class="navbar-brand" href="#">
-            Todo Application (<span id="task-counter">0</span>)
+            Todo Application (<span class="task-counter">0</span>)
           </a>
         </div>
 
@@ -47,7 +47,7 @@
   <script type="text/javascript" src="js/taskApi.js"></script>
   <script type="text/template" id="todo-ul-script">
     <ul id="todo-list" class="list-unstyled todo-list">
-      <% _.each(todoArray, function (task) { %>
+      <% _.each(todoArray.reverse(), function (task) { %>
         <li class="">
           <div class="checkbox">
             <label>

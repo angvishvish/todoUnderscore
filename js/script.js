@@ -6,12 +6,14 @@
     var _todoScript,
         _todoArray,
         _newTaskText,
-        _clearAll;
+        _clearAll,
+        _taskCounter;
     
     var _init = function () {
       _todoScript   = $('#todo-ul-script');
       _newTaskText  = $('#new-task');
       _clearAll     = $('.clear-all');
+      _taskCounter  = $('.task-counter');
       _todoArray    = taskApi;
 
       _setUpDom();
@@ -40,6 +42,11 @@
 
       // Update the dom
       $('.todo-ul-list').html(todoApi);
+      _updateDom();
+    }
+
+    function _updateDom() {
+      _taskCounter.html(_nextId() - 1);      
     }
 
     function _nextId () {
@@ -71,8 +78,7 @@
           "comments": [],
           "completed": false
         });
-
-        _updateDom();
+        
         _emptyInput();
         _setUpDom();
       }
