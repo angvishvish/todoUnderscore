@@ -1,0 +1,44 @@
+.main-wrapper {
+  padding-top: 50px;
+}
+
+.todo-form {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 15px;
+  background-color: #f8f8f8;
+  box-shadow: 0px 1px 1px 1px #ddd;
+}
+
+.todo-list {
+  background-color: #f8f8f8;
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px 1px #ddd;
+}
+
+.todo-list > li {
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.todo-list > li:last-child {
+  border-width: 0;
+}
+
+.todo-list > li .checkbox {
+  margin: 0;
+}
+
+.todo-list > li input:checked + span {
+  text-decoration:line-through
+}
+
+.icon-remove {
+  color: #FF7E7E;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.icon-remove:hover {
+  color: red;
+}
