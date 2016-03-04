@@ -10,7 +10,8 @@ var taskApi = [
     "id": 1,
     "name": "Fix Electronics",
     "comments":[],
-    "completed":false
+    "completed":false,
+    "deleted": false
   },
   {
     "tags": [],
@@ -23,7 +24,8 @@ var taskApi = [
     "id": 2,
     "name": "Repair Table",
     "comments":[],
-    "completed":false
+    "completed":false,
+    "deleted": false
   },
   {
     "tags": [],
@@ -36,7 +38,8 @@ var taskApi = [
     "id": 3,
     "name": "Watch Movie",
     "comments":[],
-    "completed":false
+    "completed":false,
+    "deleted": false
   },
   {
     "tags": [],
@@ -49,6 +52,7 @@ var taskApi = [
     "id": 4,
     "name": "Go to home",
     "comments":[],
-    "completed":false
+    "completed":false,
+    "deleted": false
   }
 ]

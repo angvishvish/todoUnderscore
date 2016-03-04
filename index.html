@@ -22,6 +22,9 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav pull-right">
             <li>
+              <a class="undo-remove">Undo Remove</a>
+            </li>
+            <li>
               <a class="clear-all">Clear All</a>
             </li>
             <li>
@@ -36,7 +39,6 @@
     <div class="row">
       <div class="col-md-offset-3 col-md-6">
         <div class="todo-form">
-          <!-- <input onkeypress="newTaskKeypress(event)" type="text" id="new-task" class="form-control new-task" placeholder="Enter a task" maxlength="50" autocomplete="off" autofocus> -->
           <input type="text" id="new-task" class="form-control new-task" placeholder="Enter a task" maxlength="50" autocomplete="off" autofocus>
         </div>
         <div class="todo-ul-list"></div>
@@ -47,14 +49,14 @@
   <script type="text/javascript" src="js/taskApi.js"></script>
   <script type="text/template" id="todo-ul-script">
     <ul id="todo-list" class="list-unstyled todo-list">
-      <% _.each(todoArray.reverse(), function (task) { %>
-        <li class="">
+      <% _.each(todoArray, function (task) { %>
+        <li class="task-id-<%= task.id %> <%= task.deleted ? 'hide': '' %>">
           <div class="checkbox">
             <label>
               <input type="checkbox">
               <span><%= task.name %></span>
             </label>
-            <i onclick="removeTask(event)" class="ion-close-circled icon-remove pull-right"></i>
+            <i data-id="<%= task.id %>" class="ion-close-circled icon-remove"></i>
           </div>
         </li>
       <% }); %>
