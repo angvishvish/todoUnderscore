@@ -22,13 +22,13 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav pull-right">
             <li>
-              <a class="undo-remove">Undo Remove</a>
+              <a href="#" class="undo-remove">Undo Remove</a>
             </li>
             <li>
-              <a class="clear-all">Clear All</a>
+              <a href="#" class="clear-all">Clear All</a>
             </li>
             <li>
-              <a onclick="clearChecked()" class="">Clear Checked</a>
+              <a href="#" class="clear-checked">Clear Checked</a>
             </li>
           </ul>
         </div><!-- /.navbar-collapse -->
@@ -53,13 +53,18 @@
         <li class="task-id-<%= task.id %> <%= task.deleted ? 'hide': '' %>">
           <div class="checkbox">
             <label>
-              <input type="checkbox">
+                <input type="checkbox" <%= task.completed ? 'checked' : '' %> class="check-task" data-id="<%= task.id %>">
               <span><%= task.name %></span>
             </label>
             <i data-id="<%= task.id %>" class="ion-close-circled icon-remove"></i>
           </div>
         </li>
       <% }); %>
+      <% if (todoArray.length == 0) { %>
+        <li class="text-muted">
+          No task As of now.
+        </li>
+      <% } %>
     </ul>
   </script>
     
