@@ -30,7 +30,8 @@
 }
 
 .todo-list > li input:checked + span {
-  text-decoration:line-through
+  text-decoration:line-through;
+  color: #ddd;
 }
 
 .icon-remove {
